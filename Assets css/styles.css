@@ -25,8 +25,8 @@ body {
 }
 
 section {
-    min-height: 100vh;
-    padding: 10rem 6% 2rem;
+    min-height: 90vh;
+    padding: 4rem 6% 2rem;
 }
 
 .header {
@@ -174,6 +174,88 @@ span {
     animation: floatImage 4s ease-in-out infinite;
 }
 
+.portfolio {
+    background: #191919;
+}
+
+.portfolio h2 {
+    margin-bottom: 1rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem #f9004d;
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box .img {
+    width: 100%;
+    transition: .5s;
+    opacity: 0.7;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #f9004d);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.portfolio-box:hover.portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    margin: 0 auto;
+    text-align: center;
+    font-style: 7rem ;
+    border: 3px solid #f9004d;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    
+    
+}
+
+.portfolio-layer p {
+    font-style: 1.6rem;
+    margin: 0.8rem;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+
+
 .about {
     width: 90%;
     padding: 90% 0px;
@@ -287,12 +369,17 @@ h5 {
     margin-bottom: 18px;
 }
 
-.part p {
-    color: #fcfc;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 25px;
-}
+
+.part img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    padding: 0;
+} 
 
 .card button {
     background-color: #f9004d;
@@ -320,8 +407,7 @@ h5 {
 
 .contact-me p {
     color: #fff;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 25px;
     margin-bottom: 7px;
     text-align: center;
     animation-duration: 10s;
@@ -362,7 +448,7 @@ h5 {
     height: 45px;
     border: 2px solid #f9004d;
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 1rem;
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.5s ease;
 }
